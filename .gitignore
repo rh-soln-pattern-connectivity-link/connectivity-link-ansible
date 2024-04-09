@@ -1,0 +1,11 @@
+*.retry
+**/inventories/inventory
+**/inventories/inventory-*
+
+.vscode
+
+.ansible-lint
+
+**/user-data.yaml
+
+**/__pycache__
