@@ -1,0 +1,12 @@
+---
+
+- name: Install Connectivity Link
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  run_once: true
+
+  tasks:
+    - name: "Install Connectivity Link"
+      ansible.builtin.include_role:
+        name: ocp4_workload_connectivity_link
