@@ -1,4 +1,7 @@
 ---
 
+- name: User workload monitoring
+  ansible.builtin.include_tasks: user_workload_monitoring.yml
+
 - name: Install OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops.yml
