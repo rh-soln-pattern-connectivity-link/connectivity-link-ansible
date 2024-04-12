@@ -1,0 +1,3 @@
+[all:vars]
+
+ocp4_workload_connectivity_link_gitops_repo_password=<github token>

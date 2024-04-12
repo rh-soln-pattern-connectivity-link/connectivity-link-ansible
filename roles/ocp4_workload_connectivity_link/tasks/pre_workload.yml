@@ -22,6 +22,17 @@
   ansible.builtin.set_fact:
     r_openshift_subdomain: "{{ r_openshift_ingress_controller.resources[0].status.domain }}"
 
+- name: Retrieve API server configuration (for API endpoint)
+  kubernetes.core.k8s_info:
+    api_version: config.openshift.io/v1
+    kind: Infrastructure
+    name: cluster
+  register: r_openshift_infrastructure_cluster
+
+- name: Set openshift api server url
+  ansible.builtin.set_fact:
+    r_openshift_api_server: "{{ r_openshift_infrastructure_cluster.resources[0].status.apiServerURL }}"
+
 # Leave these as the last tasks in the playbook
 # ---------------------------------------------
 

@@ -5,3 +5,6 @@
 
 - name: Install OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops.yml
+
+- name: Setup OpenShift Gitops
+  ansible.builtin.include_tasks: openshift_gitops_setup.yml

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: {{ ocp4_workload_connectivity_link_gitops_infra_project }}
+  namespace: {{ ocp4_workload_connectivity_link_argocd_namespace }}
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - name: {{ ocp4_workload_connectivity_link_argocd_local_cluster }}
+      namespace: '*'
+      server: {{ r_openshift_api_server }}
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  sourceRepos:
+    - {{ ocp4_workload_connectivity_link_gitops_repo }}

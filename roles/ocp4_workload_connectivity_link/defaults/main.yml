@@ -141,3 +141,18 @@ ocp4_workload_connectivity_link_openshift_gitops_resource_customizations: |
       end
 
       return hs
+
+# ------------------------------------------------
+# OpenShift Gitops Setup
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_argocd_manager_service_account: argocd-manager
+ocp4_workload_connectivity_link_argocd_namespace: openshift-gitops
+
+ocp4_workload_connectivity_link_argocd_local_cluster: local
+
+ocp4_workload_connectivity_link_argocd_repo_secret: cl-repo
+
+ocp4_workload_connectivity_link_gitops_repo: https://github.com/btison/cl-install-helm.git
+
+ocp4_workload_connectivity_link_gitops_infra_project: infra
