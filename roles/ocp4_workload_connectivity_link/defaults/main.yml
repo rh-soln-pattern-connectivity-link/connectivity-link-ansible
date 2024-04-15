@@ -202,3 +202,14 @@ ocp4_workload_connectivity_link_sail_operator_operator_starting_csv: ""
 ocp4_workload_connectivity_link_sail_operator_operator_name: sailoperator
 ocp4_workload_connectivity_link_sail_operator_catalogsource: community-operators
 ocp4_workload_connectivity_link_sail_operator_catalogsource_namespace: openshift-marketplace
+
+# ------------------------------------------------
+# Istio
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_istio_applicationset_name: istio
+ocp4_workload_connectivity_link_istio_application_name: istio
+ocp4_workload_connectivity_link_istio_application_namespace: istio-system
+ocp4_workload_connectivity_link_istio_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_istio_gitops_repo_tag: main
+ocp4_workload_connectivity_link_istio_gitops_repo_path: platform/istio

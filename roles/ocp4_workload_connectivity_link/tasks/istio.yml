@@ -4,3 +4,8 @@
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'sail_applicationset.yaml.j2') | from_yaml }}"
+
+- name: Install Istio operator
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'istio_applicationset.yaml.j2') | from_yaml }}"
