@@ -11,3 +11,6 @@
 
 - name: Install Kuadrant
   ansible.builtin.include_tasks: kuadrant.yml
+
+- name: Install Sail
+  ansible.builtin.include_tasks: sail.yml
