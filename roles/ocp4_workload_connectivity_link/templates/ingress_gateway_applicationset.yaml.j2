@@ -34,7 +34,7 @@ spec:
         path: {{ ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_path }}
         helm:
           values: |
-            nameOverride: prod-web
+            nameOverride: {{ ocp4_workload_connectivity_link_ingress_gateway_name }}
             gateway:
               listeners:
                 api:
