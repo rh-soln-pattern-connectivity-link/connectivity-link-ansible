@@ -30,7 +30,7 @@
 
 - name: Get the data from the token secret
   ansible.builtin.set_fact:
-    r_argocd_manager_token: "{{ r_argocd_manager_token_secret.resources[0].data.token }}"
+    r_argocd_manager_token: "{{ r_argocd_manager_token_secret.resources[0].data.token | b64decode }}"
     r_argocd_manager_certificate: "{{ r_argocd_manager_token_secret | json_query('resources[0].data.\"ca.crt\"') }}"
 
 - name: Add local cluster to ArgoCD
