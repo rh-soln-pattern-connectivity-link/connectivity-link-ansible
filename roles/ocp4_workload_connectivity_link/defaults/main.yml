@@ -213,3 +213,14 @@ ocp4_workload_connectivity_link_istio_application_namespace: istio-system
 ocp4_workload_connectivity_link_istio_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
 ocp4_workload_connectivity_link_istio_gitops_repo_tag: main
 ocp4_workload_connectivity_link_istio_gitops_repo_path: platform/istio
+
+# ------------------------------------------------
+# Ingress Gateway
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_ingress_gateway_applicationset_name: ingress-gateway
+ocp4_workload_connectivity_link_ingress_gateway_application_name: ingress-gateway
+ocp4_workload_connectivity_link_ingress_gateway_application_namespace: ingress-gateway
+ocp4_workload_connectivity_link_ingress_gateway_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_tag: main
+ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_path: platform/ingress-gateway

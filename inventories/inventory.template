@@ -6,3 +6,7 @@ ocp4_workload_connectivity_link_kuadrant_redis_url=<external redis url>
 
 ocp4_workload_connectivity_link_aws_access_key=<AWS_ACCESS_KEY_ID>
 ocp4_workload_connectivity_link_aws_secret_access_key=<AWS_SECRET_ACCESS_KEY>
+
+ocp4_workload_connectivity_link_aws_managed_zone_id=<Managed Zone ID>
+ocp4_workload_connectivity_link_aws_managed_zone_domain=<Managed Zone domain>
+ocp4_workload_connectivity_link_aws_managed_zone_region=<Managed Zone region>

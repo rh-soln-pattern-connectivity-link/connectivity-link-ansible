@@ -14,3 +14,6 @@
 
 - name: Install Sail operator and Istio
   ansible.builtin.include_tasks: istio.yml
+
+- name: Install Ingress gateway
+  ansible.builtin.include_tasks: ingress_gateway.yaml
