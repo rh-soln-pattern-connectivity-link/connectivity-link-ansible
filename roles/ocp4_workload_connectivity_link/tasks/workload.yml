@@ -8,3 +8,6 @@
 
 - name: Setup OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops_setup.yml
+
+- name: Install Kuadrant
+  ansible.builtin.include_tasks: kuadrant.yml

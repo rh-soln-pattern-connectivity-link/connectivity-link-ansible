@@ -1,3 +1,8 @@
 [all:vars]
 
 ocp4_workload_connectivity_link_gitops_repo_password=<github token>
+
+ocp4_workload_connectivity_link_kuadrant_redis_url=<external redis url>
+
+ocp4_workload_connectivity_link_aws_access_key=<AWS_ACCESS_KEY_ID>
+ocp4_workload_connectivity_link_aws_secret_access_key=<AWS_SECRET_ACCESS_KEY>

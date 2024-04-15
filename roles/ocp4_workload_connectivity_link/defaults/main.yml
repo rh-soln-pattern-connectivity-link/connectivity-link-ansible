@@ -156,3 +156,20 @@ ocp4_workload_connectivity_link_argocd_repo_secret: cl-repo
 ocp4_workload_connectivity_link_gitops_repo: https://github.com/btison/cl-install-helm.git
 
 ocp4_workload_connectivity_link_gitops_infra_project: infra
+
+# ------------------------------------------------
+# Kuadrant Operator
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_kuadrant_operator_applicationset_name: kuadrant-operator
+ocp4_workload_connectivity_link_kuadrant_operator_application_name: kuadrant-operator
+ocp4_workload_connectivity_link_kuadrant_operator_application_namespace: kuadrant-system
+ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_tag: main
+ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_path: platform/kuadrant-operator
+
+ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: preview
+ocp4_workload_connectivity_link_kuadrant_operator_operator_install_plan_approval: Automatic
+ocp4_workload_connectivity_link_kuadrant_operator_operator_starting_csv: kuadrant-operator.v0.0.0
+ocp4_workload_connectivity_link_kuadrant_operator_operator_name: kuadrant-operator
+ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:latest
