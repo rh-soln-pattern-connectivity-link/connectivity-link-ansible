@@ -225,3 +225,14 @@ ocp4_workload_connectivity_link_ingress_gateway_gitops_repo: "{{ ocp4_workload_c
 ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_tag: main
 ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_path: platform/ingress-gateway
 ocp4_workload_connectivity_link_ingress_gateway_name: prod-web
+
+# ------------------------------------------------
+# Observability
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_observability_applicationset_name: observability
+ocp4_workload_connectivity_link_observability_application_name: observability
+ocp4_workload_connectivity_link_observability_application_namespace: monitoring
+ocp4_workload_connectivity_link_observability_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_observability_gitops_repo_tag: main
+ocp4_workload_connectivity_link_observability_gitops_repo_path: platform/observability

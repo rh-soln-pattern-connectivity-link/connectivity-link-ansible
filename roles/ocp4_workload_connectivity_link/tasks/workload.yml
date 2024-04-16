@@ -17,3 +17,6 @@
 
 - name: Install Ingress gateway
   ansible.builtin.include_tasks: ingress_gateway.yaml
+
+- name: Install Observability
+  ansible.builtin.include_tasks: observability.yaml

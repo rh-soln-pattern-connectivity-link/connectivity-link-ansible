@@ -1,0 +1,6 @@
+---
+
+- name: Install Observability stack
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'observability_applicationset.yaml.j2') | from_yaml }}"
