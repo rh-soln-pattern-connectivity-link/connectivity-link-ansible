@@ -279,3 +279,16 @@ ocp4_workload_connectivity_link_apicurio_studio_operator_application_namespace: 
 ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
 ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo_tag: main
 ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo_path: platform/apicurio-studio-operator
+
+# ------------------------------------------------
+# Apicurio Studio
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_apicurio_studio_applicationset_name: apicurio-studio
+ocp4_workload_connectivity_link_apicurio_studio_application_name: apicurio-studio
+ocp4_workload_connectivity_link_apicurio_studio_application_namespace: apicurio
+ocp4_workload_connectivity_link_apicurio_studio_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_tag: main
+ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_path: platform/apicurio-studio
+
+ocp4_workload_connectivity_link_apicurio_studio_name: apicurio-studio
