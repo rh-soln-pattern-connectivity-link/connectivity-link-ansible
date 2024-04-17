@@ -23,3 +23,6 @@
 
 - name: Install RHSSO
   ansible.builtin.include_tasks: rhsso.yml
+
+- name: Install Apicurio Studio
+  ansible.builtin.include_tasks: apicurio_studio.yml
