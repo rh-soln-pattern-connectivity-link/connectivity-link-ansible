@@ -20,3 +20,6 @@
 
 - name: Install Observability
   ansible.builtin.include_tasks: observability.yaml
+
+- name: Install RHSSO
+  ansible.builtin.include_tasks: rhsso.yml
