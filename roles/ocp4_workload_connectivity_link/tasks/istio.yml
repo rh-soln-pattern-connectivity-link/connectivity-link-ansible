@@ -5,7 +5,7 @@
     state: present
     definition: "{{ lookup('template', 'sail_applicationset.yaml.j2') | from_yaml }}"
 
-- name: Install Istio operator
+- name: Install Istio
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'istio_applicationset.yaml.j2') | from_yaml }}"
