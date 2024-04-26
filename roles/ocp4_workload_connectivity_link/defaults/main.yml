@@ -161,7 +161,6 @@ ocp4_workload_connectivity_link_gitops_infra_project: infra
 # Kuadrant Operator
 # ------------------------------------------------
 
-ocp4_workload_connectivity_link_kuadrant_operator_applicationset_name: kuadrant-operator
 ocp4_workload_connectivity_link_kuadrant_operator_application_name: kuadrant-operator
 ocp4_workload_connectivity_link_kuadrant_operator_application_namespace: kuadrant-system
 ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
