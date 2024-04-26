@@ -16,7 +16,7 @@
   ansible.builtin.include_tasks: istio.yml
 
 - name: Install Ingress gateway
-  ansible.builtin.include_tasks: ingress_gateway.yaml
+  ansible.builtin.include_tasks: ingress_gateway.yml
 
 - name: Install Observability
   ansible.builtin.include_tasks: observability.yaml
