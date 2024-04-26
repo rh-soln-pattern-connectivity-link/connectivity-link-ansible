@@ -10,9 +10,9 @@ spec:
   destinations:
     - name: {{ ocp4_workload_connectivity_link_argocd_local_cluster }}
       namespace: '*'
-      server: {{ r_openshift_api_server }}
+      server: '*'
   namespaceResourceWhitelist:
     - group: '*'
       kind: '*'
   sourceRepos:
-    - {{ ocp4_workload_connectivity_link_gitops_repo }}
+    - '*'
