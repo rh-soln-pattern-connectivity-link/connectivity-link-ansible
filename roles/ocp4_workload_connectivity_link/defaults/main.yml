@@ -292,3 +292,13 @@ ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_tag: main
 ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_path: platform/apicurio-studio
 
 ocp4_workload_connectivity_link_apicurio_studio_name: apicurio-studio
+
+# ------------------------------------------------
+# Echo Api test app
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_echo_api_application_name: echo-api
+ocp4_workload_connectivity_link_echo_api_application_namespace: echo-api
+ocp4_workload_connectivity_link_echo_api_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_echo_api_gitops_repo_tag: main
+ocp4_workload_connectivity_link_echo_api_gitops_repo_path: developer/echo-api

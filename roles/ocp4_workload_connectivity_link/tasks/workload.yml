@@ -26,3 +26,6 @@
 
 - name: Install Apicurio Studio
   ansible.builtin.include_tasks: apicurio_studio.yml
+
+- name: Install Echo API Application
+  ansible.builtin.include_tasks: echo_api.yml
