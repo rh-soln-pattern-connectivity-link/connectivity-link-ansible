@@ -188,7 +188,6 @@ ocp4_workload_connectivity_link_kuadrant_gitops_repo_path: platform/kuadrant
 # Sail Operator
 # ------------------------------------------------
 
-ocp4_workload_connectivity_link_sail_operator_applicationset_name: sail-operator
 ocp4_workload_connectivity_link_sail_operator_application_name: sail-operator
 ocp4_workload_connectivity_link_sail_operator_application_namespace: istio-system
 ocp4_workload_connectivity_link_sail_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
@@ -206,7 +205,6 @@ ocp4_workload_connectivity_link_sail_operator_catalogsource_namespace: openshift
 # Istio
 # ------------------------------------------------
 
-ocp4_workload_connectivity_link_istio_applicationset_name: istio
 ocp4_workload_connectivity_link_istio_application_name: istio
 ocp4_workload_connectivity_link_istio_application_namespace: istio-system
 ocp4_workload_connectivity_link_istio_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
