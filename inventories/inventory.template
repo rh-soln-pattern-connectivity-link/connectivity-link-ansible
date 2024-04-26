@@ -10,3 +10,5 @@ ocp4_workload_connectivity_link_aws_secret_access_key=<AWS_SECRET_ACCESS_KEY>
 ocp4_workload_connectivity_link_aws_managed_zone_id=<Managed Zone ID>
 ocp4_workload_connectivity_link_aws_managed_zone_domain=<Managed Zone domain>
 ocp4_workload_connectivity_link_aws_managed_zone_region=<Managed Zone region>
+
+ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_email=<email for letsencrypt>

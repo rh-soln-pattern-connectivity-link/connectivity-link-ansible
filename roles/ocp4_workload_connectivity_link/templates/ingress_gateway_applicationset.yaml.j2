@@ -40,9 +40,9 @@ spec:
                 api:
                   hostName: "*.{{ ocp4_workload_connectivity_link_aws_managed_zone_domain }}"
             tlsIssuer:
-              email:
-              privateKeySecretRef: le-production
-              server: https://acme-staging-v02.api.letsencrypt.org/directory
+              email: {{ ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_email }}
+              privateKeySecretRef: {{ ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_private_key_secret }}
+              server: {{ ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_server }}
               solvers:
                 route53:
                   hostedZoneID: {{ ocp4_workload_connectivity_link_aws_managed_zone_id }}

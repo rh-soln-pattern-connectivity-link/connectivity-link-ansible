@@ -226,6 +226,9 @@ ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_tag: main
 ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_path: platform/ingress-gateway
 ocp4_workload_connectivity_link_ingress_gateway_name: prod-web
 
+ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_private_key_secret: le-production
+ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_server: https://acme-v02.api.letsencrypt.org/directory
+
 # ------------------------------------------------
 # Observability
 # ------------------------------------------------
