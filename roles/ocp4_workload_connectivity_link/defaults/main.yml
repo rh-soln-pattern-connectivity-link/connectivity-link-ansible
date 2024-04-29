@@ -227,15 +227,24 @@ ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_server: https://acme-
 ocp4_workload_connectivity_link_ingress_gateway_routing_strategy: loadbalanced
 
 # ------------------------------------------------
-# Observability
+# Observability Hub
 # ------------------------------------------------
 
-ocp4_workload_connectivity_link_observability_applicationset_name: observability
-ocp4_workload_connectivity_link_observability_application_name: observability
-ocp4_workload_connectivity_link_observability_application_namespace: monitoring
-ocp4_workload_connectivity_link_observability_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_observability_gitops_repo_tag: main
-ocp4_workload_connectivity_link_observability_gitops_repo_path: platform/observability
+ocp4_workload_connectivity_link_observability_hub_application_name: observability-hub
+ocp4_workload_connectivity_link_observability_hub_application_namespace: monitoring
+ocp4_workload_connectivity_link_observability_hub_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_observability_hub_gitops_repo_tag: main
+ocp4_workload_connectivity_link_observability_hub_gitops_repo_path: platform/observability-hub
+
+# ------------------------------------------------
+# Observability Worker
+# ------------------------------------------------
+
+ocp4_workload_connectivity_link_observability_worker_application_name: observability-worker
+ocp4_workload_connectivity_link_observability_worker_application_namespace: monitoring
+ocp4_workload_connectivity_link_observability_worker_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_observability_worker_gitops_repo_tag: main
+ocp4_workload_connectivity_link_observability_worker_gitops_repo_path: platform/observability-worker
 
 # ------------------------------------------------
 # RHSSO Operator

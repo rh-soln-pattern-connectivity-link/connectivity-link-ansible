@@ -1,6 +1,11 @@
 ---
 
-- name: Install Observability stack
+- name: Install Observability Hub
   kubernetes.core.k8s:
     state: present
-    definition: "{{ lookup('template', 'observability_applicationset.yaml.j2') | from_yaml }}"
+    definition: "{{ lookup('template', 'observability_hub_application.yaml.j2') | from_yaml }}"
+
+- name: Install Observability Worker
+  kubernetes.core.k8s:
+    state: present
+    definition: "{{ lookup('template', 'observability_worker_application.yaml.j2') | from_yaml }}"
