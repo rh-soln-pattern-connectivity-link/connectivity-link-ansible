@@ -10,7 +10,7 @@
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
+    kind: Application
     name: "{{ ocp4_workload_connectivity_link_apicurio_studio_applicationset_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
@@ -19,75 +19,30 @@
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
+    kind: Application
     name: "{{ ocp4_workload_connectivity_link_rhsso_applicationset_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Observability applicationset
+- name: Undeploy Observability Worker applicationset
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_observability_applicationset_name }}"
+    kind: Application
+    name: "{{ ocp4_workload_connectivity_link_observability_worker_application_name }}"
+    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
+    wait: true
+
+- name: Undeploy Observability Hub applicationset
+  kubernetes.core.k8s:
+    state: absent
+    api_version: argoproj.io/v1alpha1
+    kind: Application
+    name: "{{ ocp4_workload_connectivity_link_observability_hub_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
 - name: Undeploy Ingress gateway applicationset
-  kubernetes.core.k8s:
-    state: absent
-    api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_ingress_gateway_applicationset_name }}"
-    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
-    wait: true
-
-- name: Undeploy Istio applicationset
-  kubernetes.core.k8s:
-    state: absent
-    api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_istio_applicationset_name }}"
-    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
-    wait: true
-
-- name: Undeploy Kuadrant applicationset
-  kubernetes.core.k8s:
-    state: absent
-    api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_kuadrant_applicationset_name }}"
-    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
-    wait: true
-
-- name: Wait until Apicurio application is deleted
-  kubernetes.core.k8s:
-    state: absent
-    api_version: argoproj.io/v1alpha1
-    kind: Application
-    name: "{{ ocp4_workload_connectivity_link_apicurio_studio_application_name }}"
-    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
-    wait: true
-
-- name: Wait until RHSSO application is deleted
-  kubernetes.core.k8s:
-    state: absent
-    api_version: argoproj.io/v1alpha1
-    kind: Application
-    name: "{{ ocp4_workload_connectivity_link_rhsso_application_name }}"
-    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
-    wait: true
-
-- name: Wait until Observability application is deleted
-  kubernetes.core.k8s:
-    state: absent
-    api_version: argoproj.io/v1alpha1
-    kind: Application
-    name: "{{ ocp4_workload_connectivity_link_observability_application_name }}"
-    namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
-    wait: true
-
-- name: Wait until Ingress gateway application is deleted
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -96,7 +51,7 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Wait until Istio application is deleted
+- name: Undeploy Istio applicationset
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -105,7 +60,7 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Wait until Kuadrant application is deleted
+- name: Undeploy Kuadrant applicationset
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -114,38 +69,38 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Apicurio Studio Operator applicationset
+- name: Undeploy Apicurio Studio Operator application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_apicurio_studio_operator_applicationset_name }}"
+    kind: Application
+    name: "{{ ocp4_workload_connectivity_link_apicurio_studio_operator_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy RHSSO Operator applicationset
+- name: Undeploy RHSSO Operator application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_rhsso_operator_applicationset_name }}"
+    kind: Application
+    name: "{{ ocp4_workload_connectivity_link_rhsso_operator_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Sail Operator applicationset
+- name: Undeploy Sail Operator application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_sail_operator_applicationset_name }}"
+    kind: Application
+    name: "{{ ocp4_workload_connectivity_link_sail_operator_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Kuadrant Operator applicationset
+- name: Undeploy Kuadrant Operator application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
-    kind: ApplicationSet
-    name: "{{ ocp4_workload_connectivity_link_kuadrant_operator_applicationset_name }}"
+    kind: Application
+    name: "{{ ocp4_workload_connectivity_link_kuadrant_operator_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
