@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: {{ ocp4_workload_connectivity_link_kuadrant_application_name }}
   namespace: {{ ocp4_workload_connectivity_link_argocd_namespace }}
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/foreground
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
