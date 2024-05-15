@@ -1,6 +1,7 @@
 ---
 
 - name: Install Observability Hub
+  when: ocp4_workload_connectivity_link_monitoring_hub | bool
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'observability_hub_application.yaml.j2') | from_yaml }}"
