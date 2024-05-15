@@ -32,6 +32,11 @@ spec:
           geoCode: {{ ocp4_workload_connectivity_link_gateway_geo_code }}
         dns:
           routingStrategy: {{ ocp4_workload_connectivity_link_ingress_gateway_routing_strategy }}
+          loadBalancing:
+            geo: 
+              defaultGeo: US
+            weighted:
+              defaultWeight: 120
         tlsIssuer:
           email: {{ ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_email }}
           privateKeySecretRef: {{ ocp4_workload_connectivity_link_ingress_gateway_tls_issuer_private_key_secret }}
