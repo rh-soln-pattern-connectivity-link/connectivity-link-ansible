@@ -171,7 +171,7 @@ ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: preview
 ocp4_workload_connectivity_link_kuadrant_operator_operator_install_plan_approval: Automatic
 ocp4_workload_connectivity_link_kuadrant_operator_operator_starting_csv: ""
 ocp4_workload_connectivity_link_kuadrant_operator_operator_name: kuadrant-operator
-ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v0.7.0-rc2
+ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v0.7.0
 
 # ------------------------------------------------
 # Kuadrant
