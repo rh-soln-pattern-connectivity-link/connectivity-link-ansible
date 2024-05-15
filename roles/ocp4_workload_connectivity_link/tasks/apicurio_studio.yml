@@ -3,9 +3,9 @@
 - name: Install Apicurio Studio operator
   kubernetes.core.k8s:
     state: present
-    definition: "{{ lookup('template', 'apicurio_studio_operator_applicationset.yaml.j2') | from_yaml }}"
+    definition: "{{ lookup('template', 'apicurio_studio_operator_application.yaml.j2') | from_yaml }}"
 
 - name: Install Apicurio Studio
   kubernetes.core.k8s:
     state: present
-    definition: "{{ lookup('template', 'apicurio_studio_applicationset.yaml.j2') | from_yaml }}"
+    definition: "{{ lookup('template', 'apicurio_studio_application.yaml.j2') | from_yaml }}"
