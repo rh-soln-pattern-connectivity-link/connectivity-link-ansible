@@ -6,25 +6,25 @@
     apply:
       become: "{{ become_override | bool }}"
 
-- name: Undeploy Apicurio Studio applicationset
+- name: Undeploy Apicurio Studio application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
     kind: Application
-    name: "{{ ocp4_workload_connectivity_link_apicurio_studio_applicationset_name }}"
+    name: "{{ ocp4_workload_connectivity_link_apicurio_studio_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy RHSSO applicationset
+- name: Undeploy RHSSO application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
     kind: Application
-    name: "{{ ocp4_workload_connectivity_link_rhsso_applicationset_name }}"
+    name: "{{ ocp4_workload_connectivity_link_rhsso_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Observability Worker applicationset
+- name: Undeploy Observability Worker applications
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -33,7 +33,7 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Observability Hub applicationset
+- name: Undeploy Observability Hub applications
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -42,7 +42,7 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Ingress gateway applicationset
+- name: Undeploy Ingress gateway application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -51,7 +51,7 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Istio applicationset
+- name: Undeploy Istio application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
@@ -60,7 +60,7 @@
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 
-- name: Undeploy Kuadrant applicationset
+- name: Undeploy Kuadrant application
   kubernetes.core.k8s:
     state: absent
     api_version: argoproj.io/v1alpha1
