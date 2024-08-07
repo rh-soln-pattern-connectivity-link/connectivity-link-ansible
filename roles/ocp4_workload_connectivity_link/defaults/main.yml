@@ -153,7 +153,7 @@ ocp4_workload_connectivity_link_argocd_local_cluster: local
 
 ocp4_workload_connectivity_link_argocd_repo_secret: cl-repo
 
-ocp4_workload_connectivity_link_gitops_repo: https://github.com/btison/cl-install-helm.git
+ocp4_workload_connectivity_link_gitops_repo: https://github.com/rh-soln-pattern-connectivity-link/cl-install-helm.git
 
 ocp4_workload_connectivity_link_gitops_infra_project: infra
 
@@ -171,7 +171,7 @@ ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: stable
 ocp4_workload_connectivity_link_kuadrant_operator_operator_install_plan_approval: Automatic
 ocp4_workload_connectivity_link_kuadrant_operator_operator_starting_csv: ""
 ocp4_workload_connectivity_link_kuadrant_operator_operator_name: kuadrant-operator
-ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v0.7.0
+ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v0.8.0
 
 # ------------------------------------------------
 # Kuadrant
@@ -309,3 +309,6 @@ ocp4_workload_connectivity_link_echo_api_gitops_repo_tag: main
 ocp4_workload_connectivity_link_echo_api_gitops_repo_path: developer/echo-api
 
 ocp4_workload_connectivity_link_echo_api_http_route_host: echo
+
+
+ocp4_workload_connectivity_link_monitoring_hub: true
