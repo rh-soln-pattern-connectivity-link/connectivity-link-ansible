@@ -12,6 +12,9 @@
 - name: Install Kuadrant
   ansible.builtin.include_tasks: kuadrant.yml
 
+- name: Install Web Terminal
+  ansible.builtin.include_tasks: webterminal_operator.yml
+
 - name: Install Sail operator and Istio
   ansible.builtin.include_tasks: istio.yml
 
@@ -21,11 +24,12 @@
 - name: Install Observability
   ansible.builtin.include_tasks: observability.yaml
 
+- name: Install Echo API Application
+  ansible.builtin.include_tasks: echo_api.yml
+
 # - name: Install RHSSO
 #   ansible.builtin.include_tasks: rhsso.yml
 
 # - name: Install Apicurio Studio
 #   ansible.builtin.include_tasks: apicurio_studio.yml
 
-# - name: Install Echo API Application
-#   ansible.builtin.include_tasks: echo_api.yml

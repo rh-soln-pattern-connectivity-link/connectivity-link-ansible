@@ -312,3 +312,22 @@ ocp4_workload_connectivity_link_echo_api_http_route_host: echo
 
 
 ocp4_workload_connectivity_link_monitoring_hub: true
+
+# ------------------------------------------------
+# Web Terminal Operator
+# ------------------------------------------------
+
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_channel: "fast"
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_automatic_install_plan_approval: true
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_starting_csv: ""
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_wait_for_deploy: true
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_name: web-terminal
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_csv_prefix: web-terminal
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalog_source: redhat-operators
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_deployment: web-terminal-controller
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_namespace: openshift-operators
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_use_catalog_snapshot: false
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalogsource_name: ""
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalogsource_namespace: openshift-operators
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalog_snapshot_image: ""
+ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalog_snapshot_image_tag: ""
