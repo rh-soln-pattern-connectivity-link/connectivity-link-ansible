@@ -1,0 +1,13 @@
+---
+
+- name: Remove APIM Module
+  ansible.builtin.include_tasks: remove_module_globex_apim.yml
+
+- name: Remove Globex application
+  ansible.builtin.include_tasks: remove_workshop.yml
+
+- name: Remove RHBK
+  ansible.builtin.include_tasks: remove_rhbk.yml
+
+- name: Remove Namespaces
+  ansible.builtin.include_tasks: remove_namespaces.yml

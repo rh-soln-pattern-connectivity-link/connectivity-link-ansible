@@ -1,0 +1,14 @@
+---
+
+- name: Install Workshop
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  run_once: true
+
+  tasks:
+    - name: "Install Workshop"
+      ansible.builtin.include_role:
+        name: ocp4_workload_cloud_architecture_workshop
+      vars:
+        ACTION: create

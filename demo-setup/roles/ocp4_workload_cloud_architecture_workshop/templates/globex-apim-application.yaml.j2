@@ -1,0 +1,45 @@
+{% for __user in r_cloud_architecture_workshop_users %}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ ocp4_workload_cloud_architecture_workshop_module_apim_argo_application_name }}-{{ __user }}
+  namespace: {{ ocp4_workload_cloud_architecture_workshop_module_apim_argo_application_namespace }}
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io/foreground
+spec:
+  destination:
+    name: ""
+    namespace: {{ r_cloud_architecture_workshop_module_apim_namespace | replace("user",__user) }}
+    server: 'https://kubernetes.default.svc'
+  project: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false
+  source:
+    repoURL: {{ ocp4_workload_cloud_architecture_workshop_module_apim_application_repo }}
+    targetRevision: {{ ocp4_workload_cloud_architecture_workshop_module_apim_application_repo_tag }}
+    path: {{ ocp4_workload_cloud_architecture_workshop_module_apim_application_repo_path }}
+    helm:
+      values: |
+
+        globex-mobile-gateway:
+          route:
+            enabled: true
+          globexStoreApp:
+            url: http://globex-store-app.globex-{{ __user }}.svc.cluster.local:8080
+          keycloak:
+            authserver: https://sso.{{ r_openshift_subdomain }}/realms/globex-{{ __user }}
+
+        globex-mobile:
+          mobileGatewayService: 
+            url: "{{ ocp4_workload_cloud_architecture_workshop_mobile_gateway_url }}"
+          sso:
+            url: https://sso.{{ r_openshift_subdomain }}/realms/globex-{{ __user }}
+            logoutUri: https://globex-mobile-globex-apim-{{ __user }}.{{ r_openshift_subdomain }}
+            client: globex-mobile
+          image:
+            tag: ec57a15
+
+{% endfor %}

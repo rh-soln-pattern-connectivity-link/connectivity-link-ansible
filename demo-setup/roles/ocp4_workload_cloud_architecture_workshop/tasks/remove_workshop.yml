@@ -1,0 +1,10 @@
+---
+
+- name: Undeploy ArgoCD application
+  kubernetes.core.k8s:
+    state: absent
+    api_version: argoproj.io/v1alpha1
+    kind: Application
+    name: "{{ ocp4_workload_cloud_architecture_workshop_globex_argo_application_name }}-user1"
+    namespace: "{{ ocp4_workload_cloud_architecture_workshop_globex_argo_application_namespace }}"
+    wait: true

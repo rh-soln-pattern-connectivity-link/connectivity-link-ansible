@@ -1,0 +1,26 @@
+---
+
+
+- name: Delete apim namespace
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: Namespace
+    name: "{{ ocp4_workload_cloud_architecture_workshop_module_apim_namespace_prefix }}-user1"
+    wait: true
+
+- name: Delete globex namespace
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: Namespace
+    name: "{{ ocp4_workload_cloud_architecture_workshop_namespace_prefix }}-user1"
+    wait: true
+
+- name: Delete globex-mw namespace
+  kubernetes.core.k8s:
+    state: absent
+    api_version: v1
+    kind: Namespace
+    name: "{{ ocp4_workload_cloud_architecture_workshop_namespace_prefix }}-mw-user1"
+    wait: true

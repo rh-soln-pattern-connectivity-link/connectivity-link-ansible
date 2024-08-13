@@ -1,0 +1,88 @@
+become_override: false
+ocp_username: opentlc-mgr
+silent: false
+
+# OCP4 Authentication:
+ocp4_workload_authentication_htpasswd_user_password: openshift
+ocp4_workload_authentication_htpasswd_user_base: user
+ocp4_workload_authentication_htpasswd_user_count: 1
+
+# Shared Users
+ocp4_workload_cloud_architecture_workshop_user_count: "{{ ocp4_workload_authentication_htpasswd_user_count }}"
+ocp4_workload_cloud_architecture_workshop_user_prefix: "{{ ocp4_workload_authentication_htpasswd_user_base }}"
+
+# ------------------------------------------------
+# Red Hat RHBK Operator
+# ------------------------------------------------
+
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_name: rhbk-operator
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_namespace: keycloak
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_channel: ""
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_automatic_install_plan_approval: true
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_starting_csv: ""
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_catalog: redhat-operators
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_csv_prefix: rhbk-operator
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_wait_for_deploy: true
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_use_catalog_snapshot: false
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_catalogsource_name: ""
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_catalogsource_namespace: keycloak
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_catalog_snapshot_image: ""
+ocp4_workload_cloud_architecture_workshop_rhbk_operator_catalog_snapshot_image_tag: ""
+
+# ------------------------------------------------
+# Red Hat build of Keycloak
+# ------------------------------------------------
+
+ocp4_workload_cloud_architecture_workshop_rhbk_application_namespace: openshift-gitops
+ocp4_workload_cloud_architecture_workshop_rhbk_application_name: rhbk
+ocp4_workload_cloud_architecture_workshop_rhbk_namespace: "{{ ocp4_workload_cloud_architecture_workshop_rhbk_operator_namespace }}"
+ocp4_workload_cloud_architecture_workshop_rhbk_gitops_repo: https://github.com/rh-soln-pattern-connectivity-link/globex-helm.git
+ocp4_workload_cloud_architecture_workshop_rhbk_gitops_repo_tag: main
+ocp4_workload_cloud_architecture_workshop_rhbk_gitops_repo_path: globex-keycloak
+
+ocp4_workload_cloud_architecture_workshop_rhbk_cr_name: rhbk
+ocp4_workload_cloud_architecture_workshop_rhbk_external_access: false
+ocp4_workload_cloud_architecture_workshop_rhbk_host: sso
+ocp4_workload_cloud_architecture_workshop_rhbk_max_time_to_wait: 600000
+
+ocp4_workload_cloud_architecture_workshop_rhbk_realm: globex
+ocp4_workload_cloud_architecture_workshop_rhbk_web_gateway_client: globex-web-gateway
+
+# ------------------------------------------------
+# Workshop
+# ------------------------------------------------
+
+# Namespaces
+ocp4_workload_cloud_architecture_workshop_namespace_prefix: globex
+
+ocp4_workload_cloud_architecture_workshop_globex_argo_application_namespace: openshift-gitops
+ocp4_workload_cloud_architecture_workshop_globex_argo_application_name: globex
+
+ocp4_workload_cloud_architecture_workshop_application_repo: https://github.com/rh-soln-pattern-connectivity-link/globex-helm.git
+ocp4_workload_cloud_architecture_workshop_application_repo_tag: main
+ocp4_workload_cloud_architecture_workshop_application_repo_path_globex: globex
+
+ocp4_workload_cloud_architecture_workshop_kafka_security_protocol: SASL_PLAINTEXT
+ocp4_workload_cloud_architecture_workshop_kafka_sasl_mechanism: SCRAM-SHA-512
+ocp4_workload_cloud_architecture_workshop_kafka_client_id: globex
+ocp4_workload_cloud_architecture_workshop_kafka_client_secret: globex
+
+ocp4_workload_cloud_architecture_workshop_globex_user_password: openshift
+
+# ------------------------------------------------
+# Workshop APIM Module
+# ------------------------------------------------
+
+# Namespaces
+ocp4_workload_cloud_architecture_workshop_module_apim_namespace_prefix: globex-apim
+
+ocp4_workload_cloud_architecture_workshop_module_apim_argo_application_namespace: openshift-gitops
+ocp4_workload_cloud_architecture_workshop_module_apim_argo_application_name: globex-apim
+
+ocp4_workload_cloud_architecture_workshop_module_apim_application_repo: https://github.com/rh-soln-pattern-connectivity-link/globex-helm.git
+ocp4_workload_cloud_architecture_workshop_module_apim_application_repo_tag: main
+ocp4_workload_cloud_architecture_workshop_module_apim_application_repo_path: globex-apim
+
+ocp4_workload_cloud_architecture_workshop_module_apim_deploy_service_registry: false
+
+ocp4_workload_cloud_architecture_workshop_module_apim_mobile_gateway_product: globex-mobile-gateway-product

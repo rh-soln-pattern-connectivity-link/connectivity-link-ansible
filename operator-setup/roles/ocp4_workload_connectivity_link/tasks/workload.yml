@@ -12,8 +12,8 @@
 - name: Install Kuadrant
   ansible.builtin.include_tasks: kuadrant.yml
 
-- name: Install Web Terminal
-  ansible.builtin.include_tasks: webterminal_operator.yml
+# - name: Install Web Terminal
+#   ansible.builtin.include_tasks: webterminal_operator.yml
 
 - name: Install Sail operator and Istio
   ansible.builtin.include_tasks: istio.yml

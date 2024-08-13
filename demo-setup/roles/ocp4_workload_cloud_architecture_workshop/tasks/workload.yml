@@ -1,0 +1,13 @@
+---
+
+- name: Install Red Hat Build of Keycloak Operator
+  ansible.builtin.include_tasks: rhbk_operator.yml
+
+- name: Install RHBK
+  ansible.builtin.include_tasks: rhbk.yml
+
+- name: Install Workshop
+  ansible.builtin.include_tasks: workshop.yml
+
+- name: Install APIM Module
+  ansible.builtin.include_tasks: module_globex_apim.yml
