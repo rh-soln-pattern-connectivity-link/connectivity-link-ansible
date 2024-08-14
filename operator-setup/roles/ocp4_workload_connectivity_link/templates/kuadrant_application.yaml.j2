@@ -23,8 +23,6 @@ spec:
     path: {{ ocp4_workload_connectivity_link_kuadrant_gitops_repo_path }}
     helm:
       values: |
-        redis:
-          url: {{ ocp4_workload_connectivity_link_kuadrant_redis_url }}
         aws:
           accesskey: {{ ocp4_workload_connectivity_link_aws_access_key }}
           secretAccessKey: {{ ocp4_workload_connectivity_link_aws_secret_access_key }}
