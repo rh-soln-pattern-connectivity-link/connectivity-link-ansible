@@ -1,16 +1,10 @@
 [all:vars]
 
-# E.g.: redis://default:*****@redis-xx.cxx.eu-central-1-1.ec2.redns.redis-cloud.com:10155
-ocp4_workload_connectivity_link_kuadrant_redis_url=<external redis url>
-
 ocp4_workload_connectivity_link_aws_access_key=<AWS_ACCESS_KEY_ID>
 ocp4_workload_connectivity_link_aws_secret_access_key=<AWS_SECRET_ACCESS_KEY>
 
-# E.g.: Z12345677XYZ0FF0GBHIJ0
-ocp4_workload_connectivity_link_aws_managed_zone_id=<Managed Zone ID>
-
-# E.g.: globex.sandbox902.opentlc.com
-ocp4_workload_connectivity_link_aws_managed_zone_domain=<Managed Zone domain>
+# E.g.: sandbox902.opentlc.com
+ocp4_workload_connectivity_link_main_domain=<Root Zone domain>
 
 # E.g.: This is the region where you have OpenShift running. (example eu-central-1)
 ocp4_workload_connectivity_link_aws_managed_zone_region=<Managed Zone region>
