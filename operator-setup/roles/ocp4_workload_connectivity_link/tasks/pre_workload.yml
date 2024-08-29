@@ -69,7 +69,7 @@
   block:
     - name: Create Route 53 hosted zone for the subdomain
       amazon.aws.route53_zone:
-        zone: "{{ ocp4_workload_connectivity_link_aws_managed_zone_domain }}"
+        zone: "globex.{{ ocp4_workload_connectivity_link_main_domain }}"
       register: subdomain_zone
 
     - debug: msg="subdomain_zone:{{ subdomain_zone }}"
@@ -78,7 +78,7 @@
       ansible.builtin.set_fact:
         ocp4_workload_connectivity_link_aws_managed_zone_id: "{{ subdomain_zone.zone_id }}"
     
-    - debug: msg="Managed Zone Domain Name:{{ ocp4_workload_connectivity_link_aws_managed_zone_domain }}"
+    - debug: msg="Managed Zone Domain Name:globex.{{ ocp4_workload_connectivity_link_main_domain }}"
     - debug: msg="Managed Zone ID:{{ ocp4_workload_connectivity_link_aws_managed_zone_id }}"
 
     
@@ -103,7 +103,7 @@
       amazon.aws.route53:
         state: present
         zone: "{{ ocp4_workload_connectivity_link_main_domain }}"
-        record: "{{ ocp4_workload_connectivity_link_aws_managed_zone_domain }}"
+        record: "globex.{{ ocp4_workload_connectivity_link_main_domain }}"
         value: 
           - "{{ _nameservers[0].Value }}"
           - "{{ _nameservers[1].Value }}"
@@ -112,7 +112,7 @@
         type: "NS"
         wait: true
     
-    - debug: msg="Name servers for {{ ocp4_workload_connectivity_link_aws_managed_zone_domain }} has been setup"
+    - debug: msg="Name servers for globex.{{ ocp4_workload_connectivity_link_main_domain }} has been setup"
 
 
 # Leave these as the last tasks in the playbook
