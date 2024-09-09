@@ -1,4 +1,6 @@
 ---
+- name: AWS Route53 setup
+  ansible.builtin.include_tasks: aws-setup.yml
 
 - name: User workload monitoring
   ansible.builtin.include_tasks: user_workload_monitoring.yml
