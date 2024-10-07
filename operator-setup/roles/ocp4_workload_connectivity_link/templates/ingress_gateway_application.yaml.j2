@@ -28,7 +28,7 @@ spec:
         gateway:
           listeners:
             api:
-              hostName: "*.globex.{{ ocp4_workload_connectivity_link_main_domain }}"
+              hostName: "*.{{ ocp4_workload_connectivity_link_sub_domain_name }}.{{ ocp4_workload_connectivity_link_main_domain }}"
           geoCode: {{ ocp4_workload_connectivity_link_gateway_geo_code }}
         dns:
           routingStrategy: {{ ocp4_workload_connectivity_link_ingress_gateway_routing_strategy }}
@@ -51,7 +51,7 @@ spec:
                 name: kuadrant-aws-credentials
         awsZone:
           id: {{ ocp4_workload_connectivity_link_aws_managed_zone_id }}
-          domainName: globex.{{ ocp4_workload_connectivity_link_main_domain }}
+          domainName: {{ ocp4_workload_connectivity_link_sub_domain_name }}.{{ ocp4_workload_connectivity_link_main_domain }}
           description: "kuadrant managed zone"
         aws:
           accesskey: {{ ocp4_workload_connectivity_link_aws_access_key }}
