@@ -92,7 +92,7 @@
     state: absent
     api_version: argoproj.io/v1alpha1
     kind: Application
-    name: "{{ ocp4_workload_connectivity_link_sail_operator_application_name }}"
+    name: "{{ ocp4_workload_connectivity_link_servicemesh_operator_application_name }}"
     namespace: "{{ ocp4_workload_connectivity_link_argocd_namespace }}"
     wait: true
 

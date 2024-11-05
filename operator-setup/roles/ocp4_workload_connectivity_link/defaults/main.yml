@@ -188,18 +188,18 @@ ocp4_workload_connectivity_link_kuadrant_gitops_repo_path: platform/kuadrant
 # Sail Operator
 # ------------------------------------------------
 
-ocp4_workload_connectivity_link_sail_operator_application_name: sail-operator
-ocp4_workload_connectivity_link_sail_operator_application_namespace: istio-system
-ocp4_workload_connectivity_link_sail_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_sail_operator_gitops_repo_tag: v0.11.0
-ocp4_workload_connectivity_link_sail_operator_gitops_repo_path: platform/sail-operator
+ocp4_workload_connectivity_link_servicemesh_operator_application_name: servicemesh-operator
+ocp4_workload_connectivity_link_servicemesh_operator_application_namespace: gateway-system
+ocp4_workload_connectivity_link_servicemesh_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_servicemesh_operator_gitops_repo_tag: v0.11.0
+ocp4_workload_connectivity_link_servicemesh_operator_gitops_repo_path: platform/sail-operator
 
-ocp4_workload_connectivity_link_sail_operator_operator_channel: 3.0-dp1
-ocp4_workload_connectivity_link_sail_operator_operator_install_plan_approval: Automatic
-ocp4_workload_connectivity_link_sail_operator_operator_starting_csv: ""
-ocp4_workload_connectivity_link_sail_operator_operator_name: sailoperator
-ocp4_workload_connectivity_link_sail_operator_catalogsource: community-operators
-ocp4_workload_connectivity_link_sail_operator_catalogsource_namespace: openshift-marketplace
+ocp4_workload_connectivity_link_servicemesh_operator_operator_channel: 
+ocp4_workload_connectivity_link_servicemesh_operator_operator_install_plan_approval: Automatic
+ocp4_workload_connectivity_link_servicemesh_operator_operator_starting_csv: ""
+ocp4_workload_connectivity_link_servicemesh_operator_operator_name: servicemeshoperator3
+ocp4_workload_connectivity_link_servicemesh_operator_catalogsource: redhat-operators
+ocp4_workload_connectivity_link_servicemesh_operator_catalogsource_namespace: openshift-marketplace
 
 # ------------------------------------------------
 # Istio
