@@ -86,3 +86,16 @@ ocp4_workload_cloud_architecture_workshop_module_apim_application_repo_path: glo
 ocp4_workload_cloud_architecture_workshop_module_apim_deploy_service_registry: false
 
 ocp4_workload_cloud_architecture_workshop_module_apim_mobile_gateway_product: globex-mobile-gateway-product
+
+
+
+# ---------------------------------------------------------------
+# Cert Manager Operator settings
+# ---------------------------------------------------------------
+ocp4_workload_cert_manager_channel: stable-v1.14
+ocp4_workload_cert_manager_starting_csv: ""
+ocp4_workload_cert_manager_automatic_install_plan_approval: true
+ocp4_workload_cert_manager_use_catalog_snapshot: false
+ocp4_workload_cert_manager_catalogsource_name: ""
+ocp4_workload_cert_manager_catalog_snapshot_image: ""
+ocp4_workload_cert_manager_catalog_snapshot_image_tag: ""

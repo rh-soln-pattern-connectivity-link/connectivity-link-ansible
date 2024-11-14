@@ -11,14 +11,14 @@
 - name: Setup OpenShift Gitops
   ansible.builtin.include_tasks: openshift_gitops_setup.yml
 
+- name: Install Cert Manager
+  ansible.builtin.include_tasks: cert-manager.yml
+
 - name: Install Kuadrant
   ansible.builtin.include_tasks: kuadrant.yml
 
-# - name: Install Web Terminal
-#   ansible.builtin.include_tasks: webterminal_operator.yml
-
-- name: Install Sail operator and Istio
-  ansible.builtin.include_tasks: istio.yml
+- name: Install Service mesh  and Istio
+  ansible.builtin.include_tasks: servicemesh.yml
 
 - name: Install Ingress gateway
   ansible.builtin.include_tasks: ingress_gateway.yml

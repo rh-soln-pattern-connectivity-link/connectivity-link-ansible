@@ -164,14 +164,14 @@ ocp4_workload_connectivity_link_gitops_infra_project: infra
 ocp4_workload_connectivity_link_kuadrant_operator_application_name: kuadrant-operator
 ocp4_workload_connectivity_link_kuadrant_operator_application_namespace: kuadrant-system
 ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_tag: main
+ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_path: platform/kuadrant-operator
 
-ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: stable
+ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: preview
 ocp4_workload_connectivity_link_kuadrant_operator_operator_install_plan_approval: Automatic
 ocp4_workload_connectivity_link_kuadrant_operator_operator_starting_csv: ""
 ocp4_workload_connectivity_link_kuadrant_operator_operator_name: kuadrant-operator
-ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v0.8.0
+ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v1.0.0-rc4
 
 # ------------------------------------------------
 # Kuadrant
@@ -181,25 +181,25 @@ ocp4_workload_connectivity_link_kuadrant_applicationset_name: kuadrant
 ocp4_workload_connectivity_link_kuadrant_application_name: kuadrant
 ocp4_workload_connectivity_link_kuadrant_application_namespace: kuadrant-system
 ocp4_workload_connectivity_link_kuadrant_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_kuadrant_gitops_repo_tag: main
+ocp4_workload_connectivity_link_kuadrant_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_kuadrant_gitops_repo_path: platform/kuadrant
 
 # ------------------------------------------------
 # Sail Operator
 # ------------------------------------------------
 
-ocp4_workload_connectivity_link_sail_operator_application_name: sail-operator
-ocp4_workload_connectivity_link_sail_operator_application_namespace: istio-system
-ocp4_workload_connectivity_link_sail_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_sail_operator_gitops_repo_tag: main
-ocp4_workload_connectivity_link_sail_operator_gitops_repo_path: platform/sail-operator
+ocp4_workload_connectivity_link_servicemesh_operator_application_name: servicemesh-operator
+ocp4_workload_connectivity_link_servicemesh_operator_application_namespace: gateway-system
+ocp4_workload_connectivity_link_servicemesh_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
+ocp4_workload_connectivity_link_servicemesh_operator_gitops_repo_tag: v1.0.0-rc4
+ocp4_workload_connectivity_link_servicemesh_operator_gitops_repo_path: platform/sail-operator
 
-ocp4_workload_connectivity_link_sail_operator_operator_channel: 3.0-dp1
-ocp4_workload_connectivity_link_sail_operator_operator_install_plan_approval: Automatic
-ocp4_workload_connectivity_link_sail_operator_operator_starting_csv: ""
-ocp4_workload_connectivity_link_sail_operator_operator_name: sailoperator
-ocp4_workload_connectivity_link_sail_operator_catalogsource: community-operators
-ocp4_workload_connectivity_link_sail_operator_catalogsource_namespace: openshift-marketplace
+ocp4_workload_connectivity_link_servicemesh_operator_operator_channel: 
+ocp4_workload_connectivity_link_servicemesh_operator_operator_install_plan_approval: Automatic
+ocp4_workload_connectivity_link_servicemesh_operator_operator_starting_csv: ""
+ocp4_workload_connectivity_link_servicemesh_operator_operator_name: servicemeshoperator3
+ocp4_workload_connectivity_link_servicemesh_operator_catalogsource: redhat-operators
+ocp4_workload_connectivity_link_servicemesh_operator_catalogsource_namespace: openshift-marketplace
 
 # ------------------------------------------------
 # Istio
@@ -208,7 +208,7 @@ ocp4_workload_connectivity_link_sail_operator_catalogsource_namespace: openshift
 ocp4_workload_connectivity_link_istio_application_name: istio
 ocp4_workload_connectivity_link_istio_application_namespace: istio-system
 ocp4_workload_connectivity_link_istio_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_istio_gitops_repo_tag: main
+ocp4_workload_connectivity_link_istio_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_istio_gitops_repo_path: platform/istio
 
 # ------------------------------------------------
@@ -218,7 +218,7 @@ ocp4_workload_connectivity_link_istio_gitops_repo_path: platform/istio
 ocp4_workload_connectivity_link_ingress_gateway_application_name: ingress-gateway
 ocp4_workload_connectivity_link_ingress_gateway_application_namespace: ingress-gateway
 ocp4_workload_connectivity_link_ingress_gateway_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_tag: main
+ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_ingress_gateway_gitops_repo_path: platform/ingress-gateway
 ocp4_workload_connectivity_link_ingress_gateway_name: prod-web
 
@@ -233,7 +233,7 @@ ocp4_workload_connectivity_link_ingress_gateway_routing_strategy: loadbalanced
 ocp4_workload_connectivity_link_observability_hub_application_name: observability-hub
 ocp4_workload_connectivity_link_observability_hub_application_namespace: monitoring
 ocp4_workload_connectivity_link_observability_hub_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_observability_hub_gitops_repo_tag: main
+ocp4_workload_connectivity_link_observability_hub_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_observability_hub_gitops_repo_path: platform/observability-hub
 
 # ------------------------------------------------
@@ -243,7 +243,7 @@ ocp4_workload_connectivity_link_observability_hub_gitops_repo_path: platform/obs
 ocp4_workload_connectivity_link_observability_worker_application_name: observability-worker
 ocp4_workload_connectivity_link_observability_worker_application_namespace: monitoring
 ocp4_workload_connectivity_link_observability_worker_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_observability_worker_gitops_repo_tag: main
+ocp4_workload_connectivity_link_observability_worker_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_observability_worker_gitops_repo_path: platform/observability-worker
 
 # ------------------------------------------------
@@ -253,7 +253,7 @@ ocp4_workload_connectivity_link_observability_worker_gitops_repo_path: platform/
 ocp4_workload_connectivity_link_rhsso_operator_application_name: rhsso-operator
 ocp4_workload_connectivity_link_rhsso_operator_application_namespace: rhsso
 ocp4_workload_connectivity_link_rhsso_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_rhsso_operator_gitops_repo_tag: main
+ocp4_workload_connectivity_link_rhsso_operator_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_rhsso_operator_gitops_repo_path: platform/rhsso-operator
 
 ocp4_workload_connectivity_link_rhsso_operator_operator_channel: stable
@@ -270,7 +270,7 @@ ocp4_workload_connectivity_link_rhsso_operator_catalogsource_namespace: openshif
 ocp4_workload_connectivity_link_rhsso_application_name: rhsso
 ocp4_workload_connectivity_link_rhsso_application_namespace: rhsso
 ocp4_workload_connectivity_link_rhsso_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_rhsso_gitops_repo_tag: main
+ocp4_workload_connectivity_link_rhsso_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_rhsso_gitops_repo_path: platform/rhsso
 
 ocp4_workload_connectivity_link_rhsso_keycloak_name: keycloak
@@ -283,7 +283,7 @@ ocp4_workload_connectivity_link_rhsso_apicurio_realm: apicurio
 ocp4_workload_connectivity_link_apicurio_studio_operator_application_name: apicurio-studio-operator
 ocp4_workload_connectivity_link_apicurio_studio_operator_application_namespace: apicurio
 ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo_tag: main
+ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo_path: platform/apicurio-studio-operator
 
 # ------------------------------------------------
@@ -293,7 +293,7 @@ ocp4_workload_connectivity_link_apicurio_studio_operator_gitops_repo_path: platf
 ocp4_workload_connectivity_link_apicurio_studio_application_name: apicurio-studio
 ocp4_workload_connectivity_link_apicurio_studio_application_namespace: apicurio
 ocp4_workload_connectivity_link_apicurio_studio_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_tag: main
+ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_apicurio_studio_gitops_repo_path: platform/apicurio-studio
 
 ocp4_workload_connectivity_link_apicurio_studio_name: apicurio-studio
@@ -305,7 +305,7 @@ ocp4_workload_connectivity_link_apicurio_studio_name: apicurio-studio
 ocp4_workload_connectivity_link_echo_api_application_name: echo-api
 ocp4_workload_connectivity_link_echo_api_application_namespace: echo-api
 ocp4_workload_connectivity_link_echo_api_gitops_repo: "{{ ocp4_workload_connectivity_link_gitops_repo }}"
-ocp4_workload_connectivity_link_echo_api_gitops_repo_tag: main
+ocp4_workload_connectivity_link_echo_api_gitops_repo_tag: v1.0.0-rc4
 ocp4_workload_connectivity_link_echo_api_gitops_repo_path: developer/echo-api
 
 ocp4_workload_connectivity_link_echo_api_http_route_host: echo
