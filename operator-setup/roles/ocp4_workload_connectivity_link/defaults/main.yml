@@ -167,11 +167,11 @@ ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo: "{{ ocp4_workload
 ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_tag: main
 ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_path: platform/kuadrant-operator
 
-ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: preview
+ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: stable
 ocp4_workload_connectivity_link_kuadrant_operator_operator_install_plan_approval: Automatic
 ocp4_workload_connectivity_link_kuadrant_operator_operator_starting_csv: ""
 ocp4_workload_connectivity_link_kuadrant_operator_operator_name: kuadrant-operator
-ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v1.0.0-rc10
+ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v1.0.0
 
 # ------------------------------------------------
 # Kuadrant
