@@ -17,5 +17,5 @@
 
 - name: Setup openshift-user-workload-monitoring
   ansible.builtin.shell:
-    cmd: oc patch cm user-workload-monitoring-config -n openshift-user-workload-monitoring --type json --patch '[{ "op"{{':'}} "replace", "path"{{':'}} "/data/config.yaml", "value"{{':'}} "prometheus:\n    remoteWrite:\n    - url{{':'}} \"https://{{ _receiver }}/api/v1/receive\"\n      basicAuth{{':'}} \n        username{{':'}} \n          name{{':'}} basic-auth-prom\n          key{{':'}} username\n        password{{':'}}\n        name{{':'}} basic-auth-prom\n          key{{':'}} password\n"}]'
+    cmd: oc patch cm user-workload-monitoring-config -n openshift-user-workload-monitoring --type json --patch '[{ "op"{{':'}} "replace", "path"{{':'}} "/data/config.yaml", "value"{{':'}} "prometheus:\n    remoteWrite:\n    - url{{':'}} \"https://{{ _receiver }}/api/v1/receive\"\n      basicAuth{{':'}}\n        username{{':'}}\n          name{{':'}} basic-auth-prom\n          key{{':'}} username\n        password{{':'}}\n          name{{':'}} basic-auth-prom\n          key{{':'}} password\n"}]'
   
