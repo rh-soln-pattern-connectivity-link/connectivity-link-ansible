@@ -1,6 +1,0 @@
----
-
-- name: Install Ingress Gateway
-  kubernetes.core.k8s:
-    state: present
-    definition: "{{ lookup('template', 'ingress_gateway_application.yaml.j2') | from_yaml }}"

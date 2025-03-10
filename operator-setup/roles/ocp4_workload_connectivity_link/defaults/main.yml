@@ -170,8 +170,10 @@ ocp4_workload_connectivity_link_kuadrant_operator_gitops_repo_path: platform/kua
 ocp4_workload_connectivity_link_kuadrant_operator_operator_channel: stable
 ocp4_workload_connectivity_link_kuadrant_operator_operator_install_plan_approval: Automatic
 ocp4_workload_connectivity_link_kuadrant_operator_operator_starting_csv: ""
-ocp4_workload_connectivity_link_kuadrant_operator_operator_name: kuadrant-operator
-ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_image: quay.io/kuadrant/kuadrant-operator-catalog:v1.0.1
+ocp4_workload_connectivity_link_kuadrant_operator_operator_name: rhcl-operator
+ocp4_workload_connectivity_link_kuadrant_operator_operator_catalogsource: redhat-operators
+ocp4_workload_connectivity_link_kuadrant_operator_catalogsource_namespace: openshift-marketplace
+
 
 # ------------------------------------------------
 # Kuadrant
@@ -331,3 +333,4 @@ ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalogsource_nam
 ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalogsource_namespace: openshift-operators
 ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalog_snapshot_image: ""
 ocp4_workload_cloud_architecture_workshop_webterminal_operator_catalog_snapshot_image_tag: ""
+

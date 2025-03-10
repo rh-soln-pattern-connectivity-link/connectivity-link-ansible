@@ -1,11 +1,11 @@
 ---
 
-- name: Install Kuadrant operator
+- name: Install RHCL operator
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'kuadrant_operator_application.yaml.j2') | from_yaml }}"
 
-- name: Install Kuadrant
+- name: Install RHCL
   kubernetes.core.k8s:
     state: present
     definition: "{{ lookup('template', 'kuadrant_application.yaml.j2') | from_yaml }}"

@@ -21,13 +21,16 @@
   ansible.builtin.include_tasks: servicemesh.yml
 
 - name: Install Ingress gateway
-  ansible.builtin.include_tasks: ingress_gateway.yml
+  ansible.builtin.include_tasks: ingress-gateway.yml
 
 - name: Install Observability
   ansible.builtin.include_tasks: observability.yaml
 
 - name: Install Echo API Application
   ansible.builtin.include_tasks: echo_api.yml
+
+- name: Install Webterminal
+  ansible.builtin.include_tasks: webterminal_operator.yml
 
 # - name: Install RHSSO
 #   ansible.builtin.include_tasks: rhsso.yml
