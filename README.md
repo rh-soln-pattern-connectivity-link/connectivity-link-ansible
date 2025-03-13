@@ -7,4 +7,4 @@ ansible-playbook playbooks/ocp4_workload_connectivity_link.yml  -e ACTION=create
 Step 2: Demo setup
 
 cd ../demo-setup
-ansible-playbook playbooks/globex.yml -e ACTION=create -e "ocp4_workload_cloud_architecture_workshop_mobile_gateway_url=https://globex-mobile.managed.sandbox1585.opentlc.com"
+ansible-playbook playbooks/globex.yml -e ACTION=create -e "ocp4_workload_cloud_architecture_workshop_mobile_gateway_url=https://globex-mobile.globex.sandbox2145.opentlc.com"
