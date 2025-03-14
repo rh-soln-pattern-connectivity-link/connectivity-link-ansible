@@ -29,8 +29,8 @@
 - name: Install Echo API Application
   ansible.builtin.include_tasks: echo_api.yml
 
-- name: Install Webterminal
-  ansible.builtin.include_tasks: webterminal_operator.yml
+# - name: Install Webterminal
+#   ansible.builtin.include_tasks: webterminal_operator.yml
 
 # - name: Install RHSSO
 #   ansible.builtin.include_tasks: rhsso.yml
